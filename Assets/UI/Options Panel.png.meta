@@ -1,0 +1,1248 @@
+fileFormatVersion: 2
+guid: dedd351b266368046a129a70d9e8ac17
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1361921471477879207
+    second: Options Panel_0
+  - first:
+      213: 67756897286581291
+    second: Options Panel_1
+  - first:
+      213: -4240857867655046124
+    second: Options Panel_2
+  - first:
+      213: -6319211649038020631
+    second: Options Panel_3
+  - first:
+      213: -3859679775172858340
+    second: Options Panel_4
+  - first:
+      213: 4292616981172320969
+    second: Options Panel_5
+  - first:
+      213: -3996045514572748292
+    second: Options Panel_6
+  - first:
+      213: -5109926577320517477
+    second: Options Panel_7
+  - first:
+      213: 1068188256081429717
+    second: Options Panel_8
+  - first:
+      213: -2657865390905543594
+    second: Options Panel_9
+  - first:
+      213: -440816803954497672
+    second: Options Panel_10
+  - first:
+      213: -3657088505273287785
+    second: Options Panel_11
+  - first:
+      213: -6148984467460068999
+    second: Options Panel_12
+  - first:
+      213: 2715745712597086769
+    second: Options Panel_13
+  - first:
+      213: 4068304948336775986
+    second: Options Panel_14
+  - first:
+      213: 2498539130616174221
+    second: Options Panel_15
+  - first:
+      213: -215044806374163308
+    second: Options Panel_16
+  - first:
+      213: -4123891983205666434
+    second: Options Panel_17
+  - first:
+      213: -1145931680957779849
+    second: Options Panel_18
+  - first:
+      213: -5397095774248042436
+    second: Options Panel_19
+  - first:
+      213: 5212090114484516783
+    second: Options Panel_20
+  - first:
+      213: -4874640070590084509
+    second: Options Panel_21
+  - first:
+      213: 2216271818544663918
+    second: Options Panel_22
+  - first:
+      213: -8791970490570393903
+    second: Options Panel_23
+  - first:
+      213: 8233363161931620789
+    second: Options Panel_24
+  - first:
+      213: -1774727111018807226
+    second: Options Panel_25
+  - first:
+      213: 7166958489317279513
+    second: Options Panel_26
+  - first:
+      213: -805219341764064198
+    second: Options Panel_27
+  - first:
+      213: 2739236041724361621
+    second: Options Panel_28
+  - first:
+      213: -253274452640025446
+    second: Options Panel_29
+  - first:
+      213: 1937972799047653970
+    second: Options Panel_30
+  - first:
+      213: 6596167317579499908
+    second: Options Panel_31
+  - first:
+      213: -5219258166703179935
+    second: Options Panel_32
+  - first:
+      213: -1115126935568153679
+    second: Options Panel_33
+  - first:
+      213: 8371828033757176394
+    second: Options Panel_34
+  - first:
+      213: 6029653461492763048
+    second: Options Panel_35
+  - first:
+      213: 2272194009496130399
+    second: Options Panel_36
+  - first:
+      213: -1889145873651793837
+    second: Options Panel_37
+  - first:
+      213: 4875202775353122496
+    second: Options Panel_38
+  - first:
+      213: 62486361095070521
+    second: Options Panel_39
+  - first:
+      213: 3343557202735493205
+    second: Options Panel_40
+  - first:
+      213: 7543612807211390375
+    second: Options Panel_41
+  - first:
+      213: 1893236546793348759
+    second: Options Panel_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Options Panel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1536
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a19a6fcc5486e210800000000000000
+      internalID: 1361921471477879207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_1
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 921
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c69d10a88b0f000800000000000000
+      internalID: 67756897286581291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_2
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 921
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c10870d327525c0800000000000000
+      internalID: -4240857867655046124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 718
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ef049e5c76ad48a0800000000000000
+      internalID: -6319211649038020631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 707
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1eef06a1b9af6ac0800000000000000
+      internalID: -3859679775172858340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_5
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 699
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9caf59fa660729b30800000000000000
+      internalID: 4292616981172320969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 659
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf92995c6c13b88c0800000000000000
+      internalID: -3996045514572748292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 651
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b90ab7af9d4e519b0800000000000000
+      internalID: -5109926577320517477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 643
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d44af43f87f2de00800000000000000
+      internalID: 1068188256081429717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 628
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 654354a428d5d1bd0800000000000000
+      internalID: -2657865390905543594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_10
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 643
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877e44dc377e1e9f0800000000000000
+      internalID: -440816803954497672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_11
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 619
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b750b61696f3dc0800000000000000
+      internalID: -3657088505273287785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_12
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 619
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979e5af943b6aaaa0800000000000000
+      internalID: -6148984467460068999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_13
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 603
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132b3a3465440b520800000000000000
+      internalID: 2715745712597086769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_14
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 582
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233d393bbc5857830800000000000000
+      internalID: 4068304948336775986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 572
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d865ac9f9189ca220800000000000000
+      internalID: 2498539130616174221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_16
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 559
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c764153e1040df0800000000000000
+      internalID: -215044806374163308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_17
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 547
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e71f1f0371ef4c6c0800000000000000
+      internalID: -4123891983205666434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_18
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 538
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77035a32535d810f0800000000000000
+      internalID: -1145931680957779849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_19
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 523
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c300f250df9a915b0800000000000000
+      internalID: -5397095774248042436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_20
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 493
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa7bc232850155840800000000000000
+      internalID: 5212090114484516783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_21
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 483
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ac798ceacc95cb0800000000000000
+      internalID: -4874640070590084509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_22
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 475
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d40160a77c1ce10800000000000000
+      internalID: 2216271818544663918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_23
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 470
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6b5d1bb65acf580800000000000000
+      internalID: -8791970490570393903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_24
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 453
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1a8bd6c28c24270800000000000000
+      internalID: 8233363161931620789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_25
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 419
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640087e6817ee57e0800000000000000
+      internalID: -1774727111018807226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_26
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 411
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9170abb16c6267360800000000000000
+      internalID: 7166958489317279513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_27
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 403
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c01ef564943d4f0800000000000000
+      internalID: -805219341764064198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_28
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 379
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b7de6baa8b30620800000000000000
+      internalID: 2739236041724361621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_29
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 355
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94b5bb2a303c7cf0800000000000000
+      internalID: -253274452640025446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_30
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 370
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ada9f2eff05ea10800000000000000
+      internalID: 1937972799047653970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_31
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 315
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4890e533a3b4a8b50800000000000000
+      internalID: 6596167317579499908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_32
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 142
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167b996a9587197b0800000000000000
+      internalID: -5219258166703179935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_33
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 135
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b38df5d5f54680f0800000000000000
+      internalID: -1115126935568153679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_34
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 139
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42e0c8ad35be2470800000000000000
+      internalID: 8371828033757176394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_35
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 127
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a90bf270e1ada350800000000000000
+      internalID: 6029653461492763048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_36
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 120
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5399ccb964788f10800000000000000
+      internalID: 2272194009496130399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_37
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 119
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350071846d768c5e0800000000000000
+      internalID: -1889145873651793837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_38
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 104
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cedbe0281338a340800000000000000
+      internalID: 4875202775353122496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_39
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 103
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933e06ca30ffdd000800000000000000
+      internalID: 62486361095070521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_40
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 94
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5507f3b9f83b66e20800000000000000
+      internalID: 3343557202735493205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_41
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 95
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a51ce061eb40b860800000000000000
+      internalID: 7543612807211390375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options Panel_42
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 39
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e9767cb90264a10800000000000000
+      internalID: 1893236546793348759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Options Panel_0: 1361921471477879207
+      Options Panel_1: 67756897286581291
+      Options Panel_10: -440816803954497672
+      Options Panel_11: -3657088505273287785
+      Options Panel_12: -6148984467460068999
+      Options Panel_13: 2715745712597086769
+      Options Panel_14: 4068304948336775986
+      Options Panel_15: 2498539130616174221
+      Options Panel_16: -215044806374163308
+      Options Panel_17: -4123891983205666434
+      Options Panel_18: -1145931680957779849
+      Options Panel_19: -5397095774248042436
+      Options Panel_2: -4240857867655046124
+      Options Panel_20: 5212090114484516783
+      Options Panel_21: -4874640070590084509
+      Options Panel_22: 2216271818544663918
+      Options Panel_23: -8791970490570393903
+      Options Panel_24: 8233363161931620789
+      Options Panel_25: -1774727111018807226
+      Options Panel_26: 7166958489317279513
+      Options Panel_27: -805219341764064198
+      Options Panel_28: 2739236041724361621
+      Options Panel_29: -253274452640025446
+      Options Panel_3: -6319211649038020631
+      Options Panel_30: 1937972799047653970
+      Options Panel_31: 6596167317579499908
+      Options Panel_32: -5219258166703179935
+      Options Panel_33: -1115126935568153679
+      Options Panel_34: 8371828033757176394
+      Options Panel_35: 6029653461492763048
+      Options Panel_36: 2272194009496130399
+      Options Panel_37: -1889145873651793837
+      Options Panel_38: 4875202775353122496
+      Options Panel_39: 62486361095070521
+      Options Panel_4: -3859679775172858340
+      Options Panel_40: 3343557202735493205
+      Options Panel_41: 7543612807211390375
+      Options Panel_42: 1893236546793348759
+      Options Panel_5: 4292616981172320969
+      Options Panel_6: -3996045514572748292
+      Options Panel_7: -5109926577320517477
+      Options Panel_8: 1068188256081429717
+      Options Panel_9: -2657865390905543594
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -5002,17 +5002,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthPickup
       objectReference: {fileID: 0}
-    - target: {fileID: 2706602258389433847, guid: ea432c892b85ba54283ceacf870f1dc6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3900105683239488748, guid: ea432c892b85ba54283ceacf870f1dc6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3900105683239488748, guid: ea432c892b85ba54283ceacf870f1dc6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 3900105683239488748, guid: ea432c892b85ba54283ceacf870f1dc6, type: 3}
       propertyPath: m_LocalPosition.z

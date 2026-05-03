@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 736ae2c644836144296331957d6f867b
+guid: 718c88aab87c44b4a9744c0e7ba28d74
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1168367719595195172
-    second: "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_0"
+      213: 2107693431692627314
+    second: O2-idle_0
   - first:
-      213: -3029644209268709099
-    second: "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_1"
+      213: 9036260071307816657
+    second: O2-idle_1
   - first:
-      213: -8918494966916108878
-    second: "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_2"
+      213: -4883685489339317179
+    second: O2-idle_2
   - first:
-      213: 3221865175134985786
-    second: "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_3"
+      213: -6741931357176359469
+    second: O2-idle_3
+  - first:
+      213: 396086584252233837
+    second: O2-idle_4
+  - first:
+      213: 4936339401200215165
+    second: O2-idle_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,30 +111,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_0"
+      name: O2-idle_0
       rect:
         serializedVersion: 2
-        x: 119
-        y: 407
-        width: 1476
-        height: 1102
+        x: 1
+        y: 0
+        width: 47
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd4ce72dfbf19cfe0800000000000000
-      internalID: -1168367719595195172
+      spriteID: 27d86735208004d10800000000000000
+      internalID: 2107693431692627314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_1"
+      name: O2-idle_1
       rect:
         serializedVersion: 2
-        x: 831
-        y: 1501
-        width: 6
-        height: 6
+        x: 49
+        y: 0
+        width: 47
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51928b6b4aa84f5d0800000000000000
-      internalID: -3029644209268709099
+      spriteID: 1de2950a8ae376d70800000000000000
+      internalID: 9036260071307816657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_2"
+      name: O2-idle_2
       rect:
         serializedVersion: 2
-        x: 977
-        y: 1499
-        width: 6
-        height: 6
+        x: 97
+        y: 0
+        width: 47
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2bd2bdd64142b3480800000000000000
-      internalID: -8918494966916108878
+      spriteID: 544433d1ce9a93cb0800000000000000
+      internalID: -4883685489339317179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_3"
+      name: O2-idle_3
       rect:
         serializedVersion: 2
-        x: 1011
-        y: 1500
-        width: 12
-        height: 8
+        x: 145
+        y: 0
+        width: 47
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +196,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3e5f1e7e4d56bc20800000000000000
-      internalID: 3221865175134985786
+      spriteID: 3d59f63a629df62a0800000000000000
+      internalID: -6741931357176359469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O2-idle_4
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 0
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d68f6aa56ae2f7500800000000000000
+      internalID: 396086584252233837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O2-idle_5
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 0
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d74ad431886618440800000000000000
+      internalID: 4936339401200215165
       vertices: []
       indices: 
       edges: []
@@ -223,10 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_0": -1168367719595195172
-      "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_1": -3029644209268709099
-      "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_2": -8918494966916108878
-      "\u0E44\u0E02\u0E21\u0E31\u0E19\u0E15\u0E34\u0E14\u0E40\u0E21\u0E47\u0E14\u0E40\u0E25\u0E37\u0E2D\u0E141_20260301162817_3": 3221865175134985786
+      O2-idle_0: 2107693431692627314
+      O2-idle_1: 9036260071307816657
+      O2-idle_2: -4883685489339317179
+      O2-idle_3: -6741931357176359469
+      O2-idle_4: 396086584252233837
+      O2-idle_5: 4936339401200215165
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

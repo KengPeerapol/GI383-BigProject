@@ -209,7 +209,8 @@ Transform:
   m_LocalPosition: {x: -0.97242, y: -4.83389, z: -4.694269}
   m_LocalScale: {x: 0.4694269, y: 0.4694269, z: 0.4694269}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2105651648}
   m_Father: {fileID: 662496912}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6021048
@@ -2880,7 +2881,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 662496912}
+    m_TransformParent: {fileID: 6021047}
     m_Modifications:
     - target: {fileID: 826299225603269448, guid: aa20785cd3f75f8459a97fb30d7edc7d, type: 3}
       propertyPath: m_Name
@@ -2892,27 +2893,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3607911581756408442, guid: aa20785cd3f75f8459a97fb30d7edc7d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.055345427
+      value: 0.11789999
       objectReference: {fileID: 0}
     - target: {fileID: 3607911581756408442, guid: aa20785cd3f75f8459a97fb30d7edc7d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.055345427
+      value: 0.11789999
       objectReference: {fileID: 0}
     - target: {fileID: 3607911581756408442, guid: aa20785cd3f75f8459a97fb30d7edc7d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.055345427
+      value: 0.11789999
       objectReference: {fileID: 0}
     - target: {fileID: 3607911581756408442, guid: aa20785cd3f75f8459a97fb30d7edc7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.97242
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3607911581756408442, guid: aa20785cd3f75f8459a97fb30d7edc7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.5
+      value: -5.6795
       objectReference: {fileID: 0}
     - target: {fileID: 3607911581756408442, guid: aa20785cd3f75f8459a97fb30d7edc7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3607911581756408442, guid: aa20785cd3f75f8459a97fb30d7edc7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3296,7 +3297,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6021047}
-  - {fileID: 2105651648}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &685550769
@@ -8491,6 +8491,7 @@ MonoBehaviour:
   gameOverUI: {fileID: 1349869167}
   victoryUI: {fileID: 1168553526}
   playerHealth: {fileID: 2105651653}
+  knockbackForce: 1.5
 --- !u!114 &2105651653
 MonoBehaviour:
   m_ObjectHideFlags: 0

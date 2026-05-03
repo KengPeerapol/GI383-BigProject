@@ -20,7 +20,7 @@ public class PlayerShoot : MonoBehaviour
             ammo.currentAmmo = 0;
         }
 
-        ammo.currentAmmo += 0.01f;
+        ammo.currentAmmo += 0.001f;
     }
 
     void Shoot()

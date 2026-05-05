@@ -4967,6 +4967,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1336047247799925258, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
   m_PrefabInstance: {fileID: 8590475957067534192}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3607911582289474244 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1637825171481528950, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+  m_PrefabInstance: {fileID: 8590475957067534192}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0a211e66856944cbe6e846992ca6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCurveMovement
+--- !u!50 &3607911582289474248 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8476325784242111211, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+  m_PrefabInstance: {fileID: 8590475957067534192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &3607911582289474250 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7159656016275602240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+  m_PrefabInstance: {fileID: 8590475957067534192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3660513826998637343
 GameObject:
   m_ObjectHideFlags: 0
@@ -5461,6 +5482,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 3607911582289474248}
+    - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
       propertyPath: victoryUI
       value: 
       objectReference: {fileID: 1168553526}
@@ -5468,6 +5493,18 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 1349869167}
+    - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: bounceForce
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 3607911582289474250}
+    - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: movementScript
+      value: 
+      objectReference: {fileID: 3607911582289474244}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

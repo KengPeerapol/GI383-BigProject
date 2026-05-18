@@ -3,20 +3,76 @@ using System.Collections;
 
 public class PlayerCollision : MonoBehaviour
 {
+    [Header("UI")]
     public GameObject gameOverUI;
     public GameObject victoryUI;
+
+    [Header("Health")]
     public Health playerHealth;
-    public SpriteRenderer playerSprite; // Drag your SpriteRenderer here
-    
+    public int damageAmount = 10;
+    public int healAmount = 10;
+
+    [Header("Sprite")]
+    public SpriteRenderer playerSprite;
+
+    [Header("Movement / Physics")]
     public PlayerCurveMovement movementScript;
     public Rigidbody2D rb;
-    
+
+    [Header("Knockback")]
     public float bounceForce = 15f;
     public float knockbackDuration = 0.2f;
-    public float yRepositionAmount = 1.5f; // Extra "pop" on the Y axis
-    
+    public float yRepositionAmount = 1.5f;
+
+    [Header("Invincible")]
     public float iFrameDuration = 1.5f;
     private bool isInvincible = false;
+
+    [Header("Animation")]
+    public Animator animator;
+    public string hitTriggerName = "Hit";
+
+    private Coroutine knockbackCoroutine;
+    private Coroutine iframeCoroutine;
+
+    private void Awake()
+    {
+        if (rb == null)
+            rb = GetComponent<Rigidbody2D>();
+
+        if (movementScript == null)
+            movementScript = GetComponent<PlayerCurveMovement>();
+
+        if (playerSprite == null)
+            playerSprite = GetComponentInChildren<SpriteRenderer>();
+
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
+
+        if (rb != null)
+        {
+            // กันตัวเอียงเวลาโดนชน
+            rb.freezeRotation = true;
+            rb.angularVelocity = 0f;
+            rb.rotation = 0f;
+
+            // ช่วยลดอาการภาพสั่น/เบลอตอนชน
+            rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+            rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        // กันตัวเอียงหรือหมุนค้างจนดูสั่น
+        if (rb != null)
+        {
+            rb.angularVelocity = 0f;
+            rb.rotation = 0f;
+        }
+
+        transform.rotation = Quaternion.identity;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -32,12 +88,15 @@ public class PlayerCollision : MonoBehaviour
         {
             HandleHit(collision.transform.position);
         }
-        
-        if(collision.CompareTag("Pickup"))
+
+        if (collision.CompareTag("Pickup"))
         {
-            playerHealth.currentHealth += 10;
+            HealPlayer();
+
+            // ถ้าอยากให้ของหายหลังเก็บ ให้เปิดบรรทัดนี้
+            // Destroy(collision.gameObject);
         }
-        
+
         if (collision.CompareTag("Finish"))
         {
             Victory();
@@ -46,60 +105,136 @@ public class PlayerCollision : MonoBehaviour
 
     void HandleHit(Vector3 enemyPos)
     {
-        playerHealth.currentHealth -= 10;
-        
+        if (playerHealth == null)
+        {
+            Debug.LogWarning("ยังไม่ได้ลาก Player Health ใส่ใน Inspector");
+            return;
+        }
+
+        playerHealth.currentHealth -= damageAmount;
+
+        PlayHitAnimation();
+
         if (playerHealth.currentHealth <= 0)
         {
+            playerHealth.currentHealth = 0;
             GameOver();
+            return;
+        }
+
+        // กัน Coroutine ซ้อนกันหลายอันจนตัวสั่น/เบลอ
+        if (knockbackCoroutine != null)
+            StopCoroutine(knockbackCoroutine);
+
+        if (iframeCoroutine != null)
+            StopCoroutine(iframeCoroutine);
+
+        knockbackCoroutine = StartCoroutine(KnockbackRoutine(enemyPos));
+        iframeCoroutine = StartCoroutine(IFrameRoutine());
+    }
+
+    void PlayHitAnimation()
+    {
+        if (animator != null)
+        {
+            animator.ResetTrigger(hitTriggerName);
+            animator.SetTrigger(hitTriggerName);
         }
         else
         {
-            StartCoroutine(KnockbackRoutine(enemyPos));
-            StartCoroutine(IFrameRoutine());
+            Debug.LogWarning("ยังไม่ได้ลาก Animator หรือหา Animator ไม่เจอ");
         }
+    }
+
+    void HealPlayer()
+    {
+        if (playerHealth == null)
+        {
+            Debug.LogWarning("ยังไม่ได้ลาก Player Health ใส่ใน Inspector");
+            return;
+        }
+
+        playerHealth.currentHealth += healAmount;
+
+        // ถ้า Health ของคุณมี maxHealth ค่อยเปิดบรรทัดนี้
+        // playerHealth.currentHealth = Mathf.Clamp(playerHealth.currentHealth, 0, playerHealth.maxHealth);
     }
 
     IEnumerator KnockbackRoutine(Vector3 enemyPos)
     {
-        movementScript.isKnockback = true;
-        
-        rb.linearVelocity = Vector2.zero;
-        
-        Vector2 direction = (transform.position - enemyPos).normalized;
-        direction.y += yRepositionAmount; 
+        if (movementScript != null)
+        {
+            movementScript.isKnockback = true;
+        }
 
-        rb.AddForce(direction.normalized * bounceForce, ForceMode2D.Impulse);
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.rotation = 0f;
+            transform.rotation = Quaternion.identity;
 
-        yield return new WaitForSeconds(knockbackDuration);
+            Vector2 direction = ((Vector2)transform.position - (Vector2)enemyPos).normalized;
 
-        movementScript.isKnockback = false;
+            // ใช้ค่าจากตัวแปรเดิม ไม่ต้องเปลี่ยนค่าใน Inspector
+            direction.y += yRepositionAmount;
+            direction = direction.normalized;
+
+            Vector2 knockbackVelocity = direction * bounceForce;
+
+            float timer = 0f;
+
+            while (timer < knockbackDuration)
+            {
+                rb.linearVelocity = knockbackVelocity;
+
+                // กันหมุน/เอียงระหว่างเด้ง
+                rb.angularVelocity = 0f;
+                rb.rotation = 0f;
+                transform.rotation = Quaternion.identity;
+
+                timer += Time.fixedDeltaTime;
+                yield return new WaitForFixedUpdate();
+            }
+
+            // หยุดแรงหลัง Knockback จบ ไม่ให้ไหลจนดูเบลอ
+            rb.linearVelocity = Vector2.zero;
+        }
+
+        if (movementScript != null)
+        {
+            movementScript.isKnockback = false;
+        }
     }
 
     IEnumerator IFrameRoutine()
     {
         isInvincible = true;
 
-        float timer = 0;
-        while (timer < iFrameDuration)
-        {
-            playerSprite.enabled = !playerSprite.enabled; 
-            yield return new WaitForSeconds(0.1f); 
-            timer += 0.1f;
-        }
+        // กันโดนดาเมจซ้ำเฉย ๆ
+        // ไม่มีล่องหน ไม่มีจาง ไม่กระพริบ
+        yield return new WaitForSeconds(iFrameDuration);
 
-        playerSprite.enabled = true; 
         isInvincible = false;
     }
 
     void GameOver()
     {
-        gameOverUI.SetActive(true);
-        Time.timeScale = 0f; // ��ش��
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(true);
+        }
+
+        Time.timeScale = 0f;
     }
 
     void Victory()
     {
-        victoryUI.SetActive(true);
+        if (victoryUI != null)
+        {
+            victoryUI.SetActive(true);
+        }
+
         Time.timeScale = 0f;
     }
 }

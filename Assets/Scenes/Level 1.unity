@@ -844,6 +844,10 @@ PrefabInstance:
       value: FinishLine
       objectReference: {fileID: 0}
     - target: {fileID: 4561007554168447592, guid: 9fc8f9b525d2e924fa8f846766fd3f73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561007554168447592, guid: 9fc8f9b525d2e924fa8f846766fd3f73, type: 3}
       propertyPath: m_TagString
       value: Finish
       objectReference: {fileID: 0}
@@ -4988,6 +4992,11 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7159656016275602240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
   m_PrefabInstance: {fileID: 8590475957067534192}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &3607911582289474254 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6551587991294745389, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+  m_PrefabInstance: {fileID: 8590475957067534192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3660513826998637343
 GameObject:
   m_ObjectHideFlags: 0
@@ -5429,6 +5438,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 662496912}
     m_Modifications:
+    - target: {fileID: 148765721601510911, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 3607911582289474254}
     - target: {fileID: 1336047247799925258, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.002
@@ -5469,6 +5482,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1637825171481528950, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: minX
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637825171481528950, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: rotationSpeed
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637825171481528950, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: spriteTransform
+      value: 
+      objectReference: {fileID: 1336047247799925258, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
     - target: {fileID: 2522108581367735976, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.1485
@@ -5486,6 +5511,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3607911582289474248}
     - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 3607911582289474254}
+    - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
       propertyPath: victoryUI
       value: 
       objectReference: {fileID: 1168553526}
@@ -5502,9 +5531,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3607911582289474250}
     - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: iFrameDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: knockbackSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
       propertyPath: movementScript
       value: 
       objectReference: {fileID: 3607911582289474244}
+    - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: upwardKnockback
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: knockbackDuration
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b4ae6a9d8fe7e6c4eb7808581f067dee
+guid: a08eb8c7c2d26f1459685bc6da287c52
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2992337265898933548
-    second: "\u0E17\u0E32\u0E07\u0E40\u0E14\u0E34\u0E19\u0E1C\u0E39\u0E49\u0E1B\u0E48\u0E27\u0E22_0"
+      213: -8224035337037849458
+    second: GI383-Pitch desk (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0E17\u0E32\u0E07\u0E40\u0E14\u0E34\u0E19\u0E1C\u0E39\u0E49\u0E1B\u0E48\u0E27\u0E22_0"
+      name: GI383-Pitch desk (2)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2400
-        height: 3800
+        width: 353
+        height: 698
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d23ee95c151976d0800000000000000
-      internalID: -2992337265898933548
+      spriteID: e8c599b0f6b5edd80800000000000000
+      internalID: -8224035337037849458
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u0E17\u0E32\u0E07\u0E40\u0E14\u0E34\u0E19\u0E1C\u0E39\u0E49\u0E1B\u0E48\u0E27\u0E22_0": -2992337265898933548
+      GI383-Pitch desk (2)_0: -8224035337037849458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

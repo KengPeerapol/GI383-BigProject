@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class LevelMenu : MonoBehaviour
 {
@@ -23,5 +24,6 @@ public class LevelMenu : MonoBehaviour
     {
         string levelName = "Level " + levelId;
         SceneManager.LoadScene(levelName);
+        Time.timeScale = 1;
     }
 }

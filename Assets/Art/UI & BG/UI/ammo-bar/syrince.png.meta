@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eca3c2f9fb276af448d1221d9469190a
+guid: ea8e2a6c44f14b64d88faec184101f3d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1450292140433828873
-    second: "\u0E41\u0E1C\u0E48\u0E19\u0E01\u0E23\u0E30\u0E14\u0E32\u0E19_0"
+      213: 5143614991526645597
+    second: syrince_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0E41\u0E1C\u0E48\u0E19\u0E01\u0E23\u0E30\u0E14\u0E32\u0E19_0"
+      name: syrince_0
       rect:
         serializedVersion: 2
-        x: 96
-        y: 137
-        width: 2208
-        height: 3570
+        x: 0
+        y: 0
+        width: 26
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f396e47bf68fdbe0800000000000000
-      internalID: -1450292140433828873
+      spriteID: d5fc15f259ac16740800000000000000
+      internalID: 5143614991526645597
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u0E41\u0E1C\u0E48\u0E19\u0E01\u0E23\u0E30\u0E14\u0E32\u0E19_0": -1450292140433828873
+      syrince_0: 5143614991526645597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

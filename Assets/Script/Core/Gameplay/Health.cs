@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
     public int currentHealth;
     public int maxHealth = 100;
 
+
     private bool isDead;
     public Action<Health> OnDeath;
 

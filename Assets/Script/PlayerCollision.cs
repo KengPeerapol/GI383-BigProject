@@ -220,6 +220,23 @@ public class PlayerCollision : MonoBehaviour
 
     void GameOver()
     {
+        // 1. ค้นหา Object ที่มี Tag "Sound" (แก้ให้ตรงกับใน Unity ของคุณแล้ว)
+        GameObject audioObj = GameObject.FindGameObjectWithTag("Sound");
+
+        if (audioObj != null)
+        {
+            SoundManager audioManager = audioObj.GetComponent<SoundManager>();
+            if (audioManager != null)
+            {
+                audioManager.StopMusic(); // สั่งหยุดเพลง Background
+                audioManager.PlaySFX(audioManager.death); // สั่งเล่นเสียงตอนตาย
+            }
+        }
+        else
+        {
+            Debug.LogWarning("หา Tag 'Sound' ไม่เจอ! เช็กให้ชัวร์ว่าพิมพ์พิมพ์ใหญ่-เล็กตรงกัน");
+        }
+
         if (gameOverUI != null)
         {
             gameOverUI.SetActive(true);

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 98997cc0eef5ac643b2e146ba352600a
+guid: 5f9f26a5b9a838e4a847b7f289d8ba8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5390954433757160884
-    second: Cancle Button Remove bg_0
+      213: -3112429890196468111
+    second: tes_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cancle Button Remove bg_0
+      name: tes_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 1516
-        height: 1024
+        width: 48
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b5a968be7480da40800000000000000
-      internalID: 5390954433757160884
+      spriteID: 17e0886518d6ec4d0800000000000000
+      internalID: -3112429890196468111
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cancle Button Remove bg_0: 5390954433757160884
+      tes_0: -3112429890196468111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

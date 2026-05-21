@@ -111,6 +111,19 @@ public class PlayerCollision : MonoBehaviour
             return;
         }
 
+        // --------------------------------------------------------
+        // เพิ่มส่วนนี้เข้าไป: เล่นเสียงตอนโดนชนศัตรู
+        GameObject audioObj = GameObject.FindGameObjectWithTag("Sound");
+        if (audioObj != null)
+        {
+            SoundManager audioManager = audioObj.GetComponent<SoundManager>();
+            if (audioManager != null && audioManager.playerHit != null)
+            {
+                audioManager.PlaySFX(audioManager.playerHit);
+            }
+        }
+        // --------------------------------------------------------
+
         playerHealth.currentHealth -= damageAmount;
 
         PlayHitAnimation();
@@ -247,6 +260,16 @@ public class PlayerCollision : MonoBehaviour
 
     void Victory()
     {
+        GameObject audioObj = GameObject.FindGameObjectWithTag("Sound");
+        if (audioObj != null)
+        {
+            SoundManager audioManager = audioObj.GetComponent<SoundManager>();
+            if (audioManager != null)
+            {
+                audioManager.StopMusic(); // หยุดเพลงฉาก
+                audioManager.PlaySFX(audioManager.victory); // เล่นเสียงชนะ
+            }
+        }
         if (victoryUI != null)
         {
             victoryUI.SetActive(true);

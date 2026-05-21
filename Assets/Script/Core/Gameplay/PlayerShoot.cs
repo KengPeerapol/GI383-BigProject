@@ -20,7 +20,8 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && ammo.currentAmmo > needAmmoToShoot)
+        // เปลี่ยนตรงนี้จาก > เป็น >= เพื่อให้ค่ากระสุนเท่ากับ 1 ก็ยิงได้เลย
+        if (Input.GetKeyDown(KeyCode.Space) && ammo.currentAmmo >= needAmmoToShoot)
         {
             Shoot();
 
@@ -49,6 +50,18 @@ public class PlayerShoot : MonoBehaviour
             Debug.LogWarning("ยังไม่ได้ใส่ firePoint");
             return;
         }
+
+        // --- เพิ่มส่วนนี้: เล่นเสียงตอนยิงกระสุน ---
+        GameObject audioObj = GameObject.FindGameObjectWithTag("Sound");
+        if (audioObj != null)
+        {
+            SoundManager audioManager = audioObj.GetComponent<SoundManager>();
+            if (audioManager != null && audioManager.playerShoot != null)
+            {
+                audioManager.PlaySFX(audioManager.playerShoot);
+            }
+        }
+        // ------------------------------------
 
         GameObject bullet = Instantiate(
             bulletPrefab,

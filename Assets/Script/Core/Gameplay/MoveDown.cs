@@ -5,8 +5,8 @@ public class MoveDown : MonoBehaviour
 
     public float speed = 10f;
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(Vector3.down * speed*Time.deltaTime);
+        transform.position += Vector3.up * speed * Time.fixedDeltaTime;
     }
 }

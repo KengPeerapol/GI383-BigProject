@@ -16,6 +16,7 @@ public class PlayerCurveMovement : MonoBehaviour
     private float targetX;
     private float currentVelocity;
     private float startY;
+    
 
     [SerializeField]
     private float rotationSpeed;

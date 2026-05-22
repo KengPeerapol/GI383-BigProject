@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
 
-    public float forwardSpeed = -8f;        // วิ่งขึ้นตลอด
+    public float forwardSpeed = -8f;        // ๏ฟฝ๏ฟฝ่งข๏ฟฝ้นต๏ฟฝอด 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,7 +13,7 @@ public class CameraMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        // วิ่งขึ้นตลอด
+        // ๏ฟฝ๏ฟฝ่งข๏ฟฝ้นต๏ฟฝอด 
         transform.position += Vector3.up * forwardSpeed * Time.fixedDeltaTime;
     }
 }

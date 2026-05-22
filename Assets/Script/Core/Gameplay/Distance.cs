@@ -15,7 +15,7 @@ public class Distance : MonoBehaviour
     void Update()
     {
         distance = (int)(finishLine.transform.position.y - player.transform.position.y);
-        if (distance <= 8)
+        if (distance <= 9)
         {
             camera.enabled = false;
             playerCurve.enabled = false;

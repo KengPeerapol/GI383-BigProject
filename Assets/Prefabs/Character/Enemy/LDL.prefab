@@ -13,7 +13,10 @@ GameObject:
   - component: {fileID: 3505889220348641151}
   - component: {fileID: 3676296073859850031}
   - component: {fileID: 2910894112924052273}
+  - component: {fileID: -3289772458479751181}
   - component: {fileID: 9084348912612819710}
+  - component: {fileID: -7759671267662311473}
+  - component: {fileID: 6673512231421548429}
   m_Layer: 0
   m_Name: LDL
   m_TagString: Enemy
@@ -180,6 +183,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-3289772458479751181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799819752493128720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b940b58d53f4a4484a2ac5fd7120d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHitAnimation
+  animator: {fileID: 3505889220348641151}
+  getHitStateName: get-hit
 --- !u!114 &9084348912612819710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,3 +209,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d5fe755b042ce4195e4bb8ee34462d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+--- !u!114 &-7759671267662311473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799819752493128720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ef8e9f027aca54ea39cf1918b0673e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDeath
+  animator: {fileID: 3505889220348641151}
+  diedStateName: died
+  destroyDelay: 0.6
+--- !u!114 &6673512231421548429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799819752493128720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043669fdb9390da4796e3124c69cd65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bullet
+  hitVfx: {fileID: 3752403612033821482, guid: 8b8617ffb95d2ff4eade8462495e955a, type: 3}
+  shakeDuration: 0.15
+  shakeMagnitude: 0.2
+  enemyDiedStateName: died
+  enemyDestroyDelay: 0.6

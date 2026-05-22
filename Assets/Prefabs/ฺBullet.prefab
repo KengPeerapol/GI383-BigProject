@@ -180,3 +180,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   hitVfx: {fileID: 3752403612033821482, guid: 8b8617ffb95d2ff4eade8462495e955a, type: 3}
+  shakeDuration: 0.15
+  shakeMagnitude: 0.2

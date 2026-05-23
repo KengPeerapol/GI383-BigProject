@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 94be72ba54d8bbe4db4e76e035724630
+guid: fba30fd065a7c5f4e89923388c838022
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5139461837798184844
-    second: drop-solid_0
+      213: 7554411064920242070
+    second: drop-solid 1_0
   - first:
-      213: -5614469437722538716
-    second: drop-solid_1
+      213: -8264873315089490293
+    second: drop-solid 1_1
   - first:
-      213: 4622599577574686311
-    second: drop-solid_2
+      213: -6431370144059154900
+    second: drop-solid 1_2
   - first:
-      213: -1756140852686802371
-    second: drop-solid_3
+      213: -1354007852686800805
+    second: drop-solid 1_3
   - first:
-      213: 6606953263100282838
-    second: drop-solid_4
+      213: 1927617250063483422
+    second: drop-solid 1_4
   - first:
-      213: 8033317033044535051
-    second: drop-solid_5
+      213: 2314951787238528779
+    second: drop-solid 1_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,133 +115,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: drop-solid_0
+      name: drop-solid 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 48
-        height: 48
+        x: 11
+        y: 15
+        width: 26
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 478ec5540b6fca8b0800000000000000
-      internalID: -5139461837798184844
+      spriteID: 697f9dba6d8a6d860800000000000000
+      internalID: 7554411064920242070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop-solid_1
+      name: drop-solid 1_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 48
+        x: 56
+        y: 13
+        width: 29
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42dc24a0bc56512b0800000000000000
-      internalID: -5614469437722538716
+      spriteID: b8e5c7452854d4d80800000000000000
+      internalID: -8264873315089490293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop-solid_2
+      name: drop-solid 1_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 48
+        x: 105
+        y: 14
+        width: 27
+        height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76eb53003d5c62040800000000000000
-      internalID: 4622599577574686311
+      spriteID: c2e1d48cdee2fb6a0800000000000000
+      internalID: -6431370144059154900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop-solid_3
+      name: drop-solid 1_3
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 48
+        x: 148
+        y: 8
+        width: 33
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d323d0ce23fe0a7e0800000000000000
-      internalID: -1756140852686802371
+      spriteID: b5883852809953de0800000000000000
+      internalID: -1354007852686800805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop-solid_4
+      name: drop-solid 1_4
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
-        height: 48
+        x: 199
+        y: 5
+        width: 30
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d743b6dcfc90bb50800000000000000
-      internalID: 6606953263100282838
+      spriteID: e1203fc0da540ca10800000000000000
+      internalID: 1927617250063483422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drop-solid_5
+      name: drop-solid 1_5
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 48
-        height: 48
+        x: 249
+        y: 8
+        width: 28
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b07e6ba77431c7f60800000000000000
-      internalID: 8033317033044535051
+      spriteID: b071286a26c502020800000000000000
+      internalID: 2314951787238528779
       vertices: []
       indices: 
       edges: []
@@ -250,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9f71bb5204f20a54288edb85576786ec
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -258,16 +258,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":48.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      drop-solid_0: -5139461837798184844
-      drop-solid_1: -5614469437722538716
-      drop-solid_2: 4622599577574686311
-      drop-solid_3: -1756140852686802371
-      drop-solid_4: 6606953263100282838
-      drop-solid_5: 8033317033044535051
+      drop-solid 1_0: 7554411064920242070
+      drop-solid 1_1: -8264873315089490293
+      drop-solid 1_2: -6431370144059154900
+      drop-solid 1_3: -1354007852686800805
+      drop-solid 1_4: 1927617250063483422
+      drop-solid 1_5: 2314951787238528779
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

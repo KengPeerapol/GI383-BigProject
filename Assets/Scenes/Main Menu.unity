@@ -1803,6 +1803,7 @@ GameObject:
   - component: {fileID: 499357923}
   - component: {fileID: 499357924}
   - component: {fileID: 499357925}
+  - component: {fileID: 499357927}
   m_Layer: 5
   m_Name: Levels Panel
   m_TagString: Untagged
@@ -1882,7 +1883,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5814307129404523636, guid: 1b02895b5439eeb4e97bc59e37106e82, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: f3a174bf631acf24ea7e76dc8b621a37, type: 3}
+  m_Resource: {fileID: 8300000, guid: 7639f902ce43b3e48a2388ea6cbf87df, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1968,6 +1969,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!222 &499357927
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499357921}
+  m_CullTransparentMesh: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,7 +2793,7 @@ AudioSource:
   m_GameObject: {fileID: 1057607519}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2893800390699982375, guid: 1b02895b5439eeb4e97bc59e37106e82, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d712d293c7e8ab942a97ae56e879e064, type: 3}
   m_PlayOnAwake: 1
@@ -3822,7 +3831,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E22\u0E32\u0E01"
+  m_text: "\u0E1B\u0E32\u0E19\u0E01\u0E25\u0E32\u0E07"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a13f2edf9b5cc4b4e854960e5b106e9b, type: 2}
   m_sharedMaterial: {fileID: -7241599016335516441, guid: a13f2edf9b5cc4b4e854960e5b106e9b, type: 2}
@@ -3831,8 +3840,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278192895
-  m_fontColor: {r: 1, g: 0.03798574, b: 0, a: 1}
+    rgba: 4278236159
+  m_fontColor: {r: 1, g: 0.7012921, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

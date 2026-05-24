@@ -10,9 +10,14 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            container.SetActive(true);
-            Time.timeScale = 0;
+            OpenpauseMenu();
         }
+    }
+    
+    public void OpenpauseMenu()
+    {
+        container.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void ResumeButton()

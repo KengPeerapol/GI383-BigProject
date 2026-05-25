@@ -13,11 +13,22 @@ public class PauseMenu : MonoBehaviour
             OpenpauseMenu();
         }
     }
-    
+
     public void OpenpauseMenu()
     {
         container.SetActive(true);
         Time.timeScale = 0;
+
+        // --- เพิ่ม: สั่งพักเพลง Background ---
+        GameObject audioObj = GameObject.FindGameObjectWithTag("Sound");
+        if (audioObj != null)
+        {
+            SoundManager audioManager = audioObj.GetComponent<SoundManager>();
+            if (audioManager != null)
+            {
+                audioManager.PauseMusic();
+            }
+        }
     }
 
     public void ResumeButton()
@@ -27,9 +38,15 @@ public class PauseMenu : MonoBehaviour
         if (audioObj != null)
         {
             SoundManager audioManager = audioObj.GetComponent<SoundManager>();
-            if (audioManager != null && audioManager.uiClick != null)
+            if (audioManager != null)
             {
-                audioManager.PlaySFX(audioManager.uiClick);
+                if (audioManager.uiClick != null)
+                {
+                    audioManager.PlaySFX(audioManager.uiClick);
+                }
+
+                // --- เพิ่ม: สั่งให้เพลง Background กลับมาเล่นต่อ ---
+                audioManager.ResumeMusic();
             }
         }
 

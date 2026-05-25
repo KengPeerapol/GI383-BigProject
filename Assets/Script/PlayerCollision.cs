@@ -35,7 +35,7 @@ public class PlayerCollision : MonoBehaviour
     [Header("Death Animation")]
     public string deathStateName = "died";
     public float deathDelay = 1.2f;
-    public bool destroyPlayerAfterDeath = true;
+    public bool disablePlayerAfterDeath = true;
 
     private bool isDead = false;
 
@@ -46,7 +46,6 @@ public class PlayerCollision : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        // เปิดให้ Object ที่ใช้ CameraMove กลับมาขยับได้
         CameraMove.StartAllMove();
 
         if (gameOverUI != null)
@@ -85,9 +84,6 @@ public class PlayerCollision : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // ห้ามใส่ rb.rotation = 0f หรือ transform.rotation = Quaternion.identity ตรงนี้
-        // ไม่งั้น Player จะไม่เอียง
-
         if (rb != null)
         {
             rb.angularVelocity = 0f;
@@ -267,10 +263,11 @@ public class PlayerCollision : MonoBehaviour
         // หยุดเวลาเกม
         Time.timeScale = 0f;
 
-        // ลบ Player หลังจากเปิด UI แล้ว
-        if (destroyPlayerAfterDeath)
+        // ปิดตัว Player แทนการลบ
+        // สำคัญ: ต้องเป็นบรรทัดท้าย ๆ เพราะถ้าปิดก่อน โค้ดหลังจากนี้จะไม่ทำงาน
+        if (disablePlayerAfterDeath)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

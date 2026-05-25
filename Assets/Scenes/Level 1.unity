@@ -13105,6 +13105,14 @@ PrefabInstance:
       value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 1637825171481528950, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: rotationAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637825171481528950, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: rotationSmooth
+      value: 4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637825171481528950, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
       propertyPath: spriteTransform
       value: 
       objectReference: {fileID: 1336047247799925258, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
@@ -13132,6 +13140,10 @@ PrefabInstance:
       propertyPath: victoryUI
       value: 
       objectReference: {fileID: 1168553526}
+    - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
+      propertyPath: deathDelay
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4996365322555000240, guid: fc16649ee06acd54e9171e0f9f422dcd, type: 3}
       propertyPath: gameOverUI
       value: 

@@ -2,18 +2,30 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
+    public float forwardSpeed = -8f;
 
-    public float forwardSpeed = -8f;        // ��觢�鹵�ʹ 
+    public static bool canMove = true;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
-        
+        // เวลา Object ถูกสร้างใหม่ในฉาก ให้กลับมาขยับได้
+        canMove = true;
     }
 
     void FixedUpdate()
     {
-        // ��觢�鹵�ʹ 
+        if (!canMove) return;
+
         transform.position += Vector3.up * forwardSpeed * Time.fixedDeltaTime;
+    }
+
+    public static void StopAllMove()
+    {
+        canMove = false;
+    }
+
+    public static void StartAllMove()
+    {
+        canMove = true;
     }
 }

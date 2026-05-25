@@ -2,36 +2,37 @@
 
 public class PlayerCurveMovement : MonoBehaviour
 {
-    //public float forwardSpeed = 8f;
-
-    public float steerAmount = 3f;       // ระยะออกสูงสุด
-    public float steerSpeed = 5f;        // ความไวตอนกด
-    public float returnSpeed = 2f;       // ความเร็วกลับกลาง
-    public float smoothTime = 0.15f;     // ความเนียนของโค้ง
+    public float steerAmount = 3f;
+    public float steerSpeed = 5f;
+    public float returnSpeed = 2f;
+    public float smoothTime = 0.15f;
     public float returnYPower = 5f;
 
     public float minX = -5f;
     public float maxX = 5f;
 
+    [Header("Rotation")]
+    public float rotationAmount = 25f;
+    public float rotationSmooth = 10f;
+
     private float targetX;
     private float currentVelocity;
     private float startY;
-    
+    private float input;
 
-    [SerializeField]
-    private float rotationSpeed;
     [HideInInspector] public bool isKnockback = false;
 
     void Start()
     {
         startY = transform.position.y;
     }
-    
+
     void Update()
     {
         if (isKnockback) return;
 
-        float input = Input.GetAxisRaw("Horizontal");
+        input = Input.GetAxisRaw("Horizontal");
+
         if (input != 0)
         {
             targetX += input * steerSpeed * Time.deltaTime;
@@ -48,8 +49,7 @@ public class PlayerCurveMovement : MonoBehaviour
         if (isKnockback) return;
 
         Vector3 pos = transform.position;
-        float oldX = pos.x;
-        
+
         pos.y = Mathf.Lerp(pos.y, startY, Time.fixedDeltaTime * returnYPower);
 
         float newX = Mathf.SmoothDamp(
@@ -61,14 +61,20 @@ public class PlayerCurveMovement : MonoBehaviour
 
         pos.x = Mathf.Clamp(newX, minX, maxX);
         transform.position = pos;
-        
-        float deltaX = newX - oldX;
-        float targetRotation = -deltaX * rotationSpeed;
-        
+
+        // เอียงตามปุ่มซ้ายขวา
+        float targetRotationZ = -input * rotationAmount;
+
+        // ถ้าไม่ได้กด ให้กลับมาตรง
+        if (input == 0)
+        {
+            targetRotationZ = 0f;
+        }
+
         transform.rotation = Quaternion.Lerp(
             transform.rotation,
-            Quaternion.Euler(0f, 0f, targetRotation),
-            Time.fixedDeltaTime * 10f);
-        
+            Quaternion.Euler(0f, 0f, targetRotationZ),
+            Time.fixedDeltaTime * rotationSmooth
+        );
     }
 }

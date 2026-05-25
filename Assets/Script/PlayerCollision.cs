@@ -32,16 +32,40 @@ public class PlayerCollision : MonoBehaviour
     public Animator animator;
     public string hitTriggerName = "Hit";
 
+    [Header("Death Animation")]
+    public string deathStateName = "died";
+    public float deathDelay = 1.2f;
+    public bool destroyPlayerAfterDeath = true;
+
+    private bool isDead = false;
+
     private Coroutine knockbackCoroutine;
     private Coroutine iframeCoroutine;
 
     private void Awake()
     {
+        Time.timeScale = 1f;
+
+        // เปิดให้ Object ที่ใช้ CameraMove กลับมาขยับได้
+        CameraMove.StartAllMove();
+
+        if (gameOverUI != null)
+            gameOverUI.SetActive(false);
+
+        if (victoryUI != null)
+            victoryUI.SetActive(false);
+
         if (rb == null)
             rb = GetComponent<Rigidbody2D>();
 
         if (movementScript == null)
             movementScript = GetComponent<PlayerCurveMovement>();
+
+        if (movementScript != null)
+        {
+            movementScript.enabled = true;
+            movementScript.isKnockback = false;
+        }
 
         if (playerSprite == null)
             playerSprite = GetComponentInChildren<SpriteRenderer>();
@@ -51,12 +75,9 @@ public class PlayerCollision : MonoBehaviour
 
         if (rb != null)
         {
-            // กันตัวเอียงเวลาโดนชน
             rb.freezeRotation = true;
             rb.angularVelocity = 0f;
-            rb.rotation = 0f;
 
-            // ช่วยลดอาการภาพสั่น/เบลอตอนชน
             rb.interpolation = RigidbodyInterpolation2D.Interpolate;
             rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         }
@@ -64,18 +85,19 @@ public class PlayerCollision : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // กันตัวเอียงหรือหมุนค้างจนดูสั่น
+        // ห้ามใส่ rb.rotation = 0f หรือ transform.rotation = Quaternion.identity ตรงนี้
+        // ไม่งั้น Player จะไม่เอียง
+
         if (rb != null)
         {
             rb.angularVelocity = 0f;
-            rb.rotation = 0f;
         }
-
-        transform.rotation = Quaternion.identity;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isDead) return;
+
         if (collision.gameObject.CompareTag("Enemy") && !isInvincible)
         {
             HandleHit(collision.transform.position);
@@ -84,6 +106,8 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isDead) return;
+
         if (collision.CompareTag("Enemy") && !isInvincible)
         {
             HandleHit(collision.transform.position);
@@ -111,31 +135,33 @@ public class PlayerCollision : MonoBehaviour
             return;
         }
 
-        // --------------------------------------------------------
-        // เพิ่มส่วนนี้เข้าไป: เล่นเสียงตอนโดนชนศัตรู
         GameObject audioObj = GameObject.FindGameObjectWithTag("Sound");
         if (audioObj != null)
         {
             SoundManager audioManager = audioObj.GetComponent<SoundManager>();
+
             if (audioManager != null && audioManager.playerHit != null)
             {
                 audioManager.PlaySFX(audioManager.playerHit);
             }
         }
-        // --------------------------------------------------------
 
         playerHealth.currentHealth -= damageAmount;
-
-        PlayHitAnimation();
 
         if (playerHealth.currentHealth <= 0)
         {
             playerHealth.currentHealth = 0;
-            GameOver();
+
+            if (!isDead)
+            {
+                StartCoroutine(DieRoutine());
+            }
+
             return;
         }
 
-        // กัน Coroutine ซ้อนกันหลายอันจนตัวสั่น/เบลอ
+        PlayHitAnimation();
+
         if (knockbackCoroutine != null)
             StopCoroutine(knockbackCoroutine);
 
@@ -159,6 +185,126 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
+    IEnumerator DieRoutine()
+    {
+        isDead = true;
+        isInvincible = true;
+
+        // หยุด Object ทุกตัวที่ใช้ CameraMove
+        CameraMove.StopAllMove();
+
+        // หยุด Coroutine เก่า
+        if (knockbackCoroutine != null)
+            StopCoroutine(knockbackCoroutine);
+
+        if (iframeCoroutine != null)
+            StopCoroutine(iframeCoroutine);
+
+        // ปิดการขยับ Player
+        if (movementScript != null)
+            movementScript.enabled = false;
+
+        // หยุดฟิสิกส์ Player
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+        }
+
+        // ปิด Collider กันชนซ้ำระหว่างตาย
+        Collider2D[] colliders = GetComponentsInChildren<Collider2D>();
+        foreach (Collider2D col in colliders)
+        {
+            col.enabled = false;
+        }
+
+        // ตอนตายให้ตัวตรง
+        transform.rotation = Quaternion.identity;
+
+        // เล่น Animation died
+        if (animator != null)
+        {
+            animator.ResetTrigger(hitTriggerName);
+            animator.Play(deathStateName, 0, 0f);
+            Debug.Log("เล่น Animation ตาย: " + deathStateName);
+        }
+        else
+        {
+            Debug.LogWarning("หา Animator ไม่เจอ");
+        }
+
+        // เล่นเสียงตาย
+        GameObject audioObj = GameObject.FindGameObjectWithTag("Sound");
+        if (audioObj != null)
+        {
+            SoundManager audioManager = audioObj.GetComponent<SoundManager>();
+
+            if (audioManager != null)
+            {
+                audioManager.StopMusic();
+
+                if (audioManager.death != null)
+                    audioManager.PlaySFX(audioManager.death);
+            }
+        }
+
+        // รอให้ Animation died เล่นจบก่อน
+        yield return new WaitForSeconds(deathDelay);
+
+        // ซ่อน Player ทันทีหลัง Animation จบ
+        HidePlayerImmediately();
+
+        // เปิด Game Over หลัง Player หาย
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("ยังไม่ได้ลาก GameOver UI ใส่ใน Inspector");
+        }
+
+        // หยุดเวลาเกม
+        Time.timeScale = 0f;
+
+        // ลบ Player หลังจากเปิด UI แล้ว
+        if (destroyPlayerAfterDeath)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void HidePlayerImmediately()
+    {
+        // ปิดภาพทุก Sprite ของ Player และลูก ๆ
+        SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer sr in sprites)
+        {
+            sr.enabled = false;
+        }
+
+        // ปิด Animator กันภาพค้าง
+        if (animator != null)
+        {
+            animator.enabled = false;
+        }
+
+        // ปิด Collider ทุกตัว
+        Collider2D[] colliders = GetComponentsInChildren<Collider2D>();
+        foreach (Collider2D col in colliders)
+        {
+            col.enabled = false;
+        }
+
+        // หยุด Rigidbody
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.simulated = false;
+        }
+    }
+
     void HealPlayer()
     {
         if (playerHealth == null)
@@ -169,7 +315,7 @@ public class PlayerCollision : MonoBehaviour
 
         playerHealth.currentHealth += healAmount;
 
-        // ถ้า Health ของคุณมี maxHealth ค่อยเปิดบรรทัดนี้
+        // ถ้ามี maxHealth ค่อยเปิดใช้
         // playerHealth.currentHealth = Mathf.Clamp(playerHealth.currentHealth, 0, playerHealth.maxHealth);
     }
 
@@ -184,12 +330,9 @@ public class PlayerCollision : MonoBehaviour
         {
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
-            rb.rotation = 0f;
-            transform.rotation = Quaternion.identity;
 
             Vector2 direction = ((Vector2)transform.position - (Vector2)enemyPos).normalized;
 
-            // ใช้ค่าจากตัวแปรเดิม ไม่ต้องเปลี่ยนค่าใน Inspector
             direction.y += yRepositionAmount;
             direction = direction.normalized;
 
@@ -200,17 +343,12 @@ public class PlayerCollision : MonoBehaviour
             while (timer < knockbackDuration)
             {
                 rb.linearVelocity = knockbackVelocity;
-
-                // กันหมุน/เอียงระหว่างเด้ง
                 rb.angularVelocity = 0f;
-                rb.rotation = 0f;
-                transform.rotation = Quaternion.identity;
 
                 timer += Time.fixedDeltaTime;
                 yield return new WaitForFixedUpdate();
             }
 
-            // หยุดแรงหลัง Knockback จบ ไม่ให้ไหลจนดูเบลอ
             rb.linearVelocity = Vector2.zero;
         }
 
@@ -224,8 +362,6 @@ public class PlayerCollision : MonoBehaviour
     {
         isInvincible = true;
 
-        // กันโดนดาเมจซ้ำเฉย ๆ
-        // ไม่มีล่องหน ไม่มีจาง ไม่กระพริบ
         yield return new WaitForSeconds(iFrameDuration);
 
         isInvincible = false;
@@ -233,23 +369,6 @@ public class PlayerCollision : MonoBehaviour
 
     void GameOver()
     {
-        // 1. ค้นหา Object ที่มี Tag "Sound" (แก้ให้ตรงกับใน Unity ของคุณแล้ว)
-        GameObject audioObj = GameObject.FindGameObjectWithTag("Sound");
-
-        if (audioObj != null)
-        {
-            SoundManager audioManager = audioObj.GetComponent<SoundManager>();
-            if (audioManager != null)
-            {
-                audioManager.StopMusic(); // สั่งหยุดเพลง Background
-                audioManager.PlaySFX(audioManager.death); // สั่งเล่นเสียงตอนตาย
-            }
-        }
-        else
-        {
-            Debug.LogWarning("หา Tag 'Sound' ไม่เจอ! เช็กให้ชัวร์ว่าพิมพ์พิมพ์ใหญ่-เล็กตรงกัน");
-        }
-
         if (gameOverUI != null)
         {
             gameOverUI.SetActive(true);
@@ -260,16 +379,22 @@ public class PlayerCollision : MonoBehaviour
 
     void Victory()
     {
+        CameraMove.StopAllMove();
+
         GameObject audioObj = GameObject.FindGameObjectWithTag("Sound");
         if (audioObj != null)
         {
             SoundManager audioManager = audioObj.GetComponent<SoundManager>();
+
             if (audioManager != null)
             {
-                audioManager.StopMusic(); // หยุดเพลงฉาก
-                audioManager.PlaySFX(audioManager.victory); // เล่นเสียงชนะ
+                audioManager.StopMusic();
+
+                if (audioManager.victory != null)
+                    audioManager.PlaySFX(audioManager.victory);
             }
         }
+
         if (victoryUI != null)
         {
             victoryUI.SetActive(true);
